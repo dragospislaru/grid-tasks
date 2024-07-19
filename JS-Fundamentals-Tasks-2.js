@@ -154,7 +154,7 @@ console.log("\n* Looping Backwards and Loops in Loops\n");
 const listOfNeighbours = [['Canada', 'Mexico'], ['Spain'], ['Poland', 'Sweden', 'Ukraine']];
 for (let i = 0; i < listOfNeighbours.length; i++) {
 	for (let j = 0; j < listOfNeighbours[i].length; j++) {
-		console.log(listOfNeighbours[i][j]);
+		console.log(`Neighbour: ${listOfNeighbours[i][j]}`);
 	}
 }
 
@@ -187,11 +187,12 @@ const myCountry = {
 	describe: function () {
 		console.log(`${this.country} has ${this.population} ${this.language}-speaking people, ${this.neighbours.length} neighbouring countries and a capital called ${this.capital}.`);
 	},
-	isIsland: function () {
-		return this.neighbours.length === 0 ? true : false
+	checkIsland: function () {
+		this.isIsland = this.neighbours.length === 0 ? true : false;
 	}
 }
 
+console.log('\n* Introduction to objects\n');
 console.log(myCountry);
 
 /*
@@ -200,6 +201,8 @@ console.log(myCountry);
  * Increase the country 's population by two million using dot notation,and then decrease it by two million using brackets notation.
 */
 
+
+console.log('\n* Dot vs. Bracket Notation\n');
 console.log(`${myCountry.country} has ${myCountry.population} ${myCountry.language}-speaking people, ${myCountry.neighbours.length} neighbouring countries and a capital called ${myCountry.capital}.`);
 myCountry.population += 2_000_000;
 myCountry['population'] -= 2_000_000;
@@ -211,5 +214,11 @@ myCountry['population'] -= 2_000_000;
  * Add a method called 'checkIsland' to the 'myCountry' object.This method will set a new property on the object, called 'isIsland'. 'isIsland' will be true if there are no neighbouring countries, and false if there are. Use the ternary operator to set the property.
 */
 
+console.log('\n* Object Methods\n');
+
+console.log("\nAdd 'describe' method");
 myCountry.describe();
-console.log(myCountry.isIsland());
+
+console.log("\nAdd 'checkIsland' method");
+myCountry.checkIsland();
+console.log(myCountry.isIsland);

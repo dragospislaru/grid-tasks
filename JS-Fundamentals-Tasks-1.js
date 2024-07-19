@@ -41,7 +41,7 @@ const finlandName = "Finland";
 
 const averagePopulation = 33_000_000;
 
-function PopulationChecker(country1Population, country1Name, country2Population, country2Name) {
+function populationChecker(country1Population, country1Name, country2Population, country2Name) {
     if (country1Population > country2Population) {
         console.log(`${country1Name} has a larger population than ${country2Name}.`);
     } else if (country1Population < country2Population) {
@@ -51,8 +51,8 @@ function PopulationChecker(country1Population, country1Name, country2Population,
     }
 }
 
-PopulationChecker(romaniaPopulation, country, finalandPopulation, finlandName);
-PopulationChecker(romaniaPopulation, country, averagePopulation, "average population");
+populationChecker(romaniaPopulation, country, finalandPopulation, finlandName);
+populationChecker(romaniaPopulation, country, averagePopulation, "average population");
 
 // Task 5
 const description = `${country} is in ${continent}, and its ${romaniaPopulation} million people speak ${language = "Romanian"}.\n`;
