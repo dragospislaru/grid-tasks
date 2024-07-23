@@ -26,14 +26,10 @@ function printResults(country, percentage) {
 	console.log(`The population of ${country} represents ${percentage.toFixed(2)}% of the world population.`);
 }
 
+const WORLD_POPULATION = 7900;
 console.log("Using Function Declaration");
 function percentageOfWorld1(population) {
-	const WORLD_POPULATION = 7900;
-	let percentage;
-
-	percentage = (population / WORLD_POPULATION) * 100;
-
-	return percentage;
+	return ((population / WORLD_POPULATION) * 100);
 }
 
 printResults("Romania", percentageOfWorld1(19));
@@ -43,12 +39,7 @@ printResults("Serbia", percentageOfWorld1(6));
 console.log("\n");
 console.log("Using Function Expression");
 const percentageOfWorld2 = function (population) {
-	const WORLD_POPULATION = 7900;
-	let percentage;
-
-	percentage = (population / WORLD_POPULATION) * 100;
-
-	return percentage;
+	return ((population / WORLD_POPULATION) * 100);
 }
 
 printResults("Romania", percentageOfWorld2(19));
@@ -64,12 +55,7 @@ console.log("\n");
 console.log("* Arrow Functions\n");
 
 const percentageOfWorld3 = (population) => {
-	const WORLD_POPULATION = 7900;
-	let percentage;
-
-	percentage = (population / WORLD_POPULATION) * 100;
-
-	return percentage;
+	return ((population / WORLD_POPULATION) * 100);
 }
 
 printResults("Romania", percentageOfWorld3(19));
