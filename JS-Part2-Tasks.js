@@ -154,12 +154,9 @@ let user = {
 };
 
 function count(obj) {
-	let count = 0;
-	for (const [key, value] of Object.entries(obj)) {
-		if (key) count += 1;
-	}
-	return count;
+	return Object.keys(obj).length;
 }
+
 console.log('\nObjects Task 1\n');
 console.log(`Number of properties: ${count(user)}`); // 2
 
@@ -186,11 +183,12 @@ function sumSalaries(obj) {
 	if (Object.values(obj) === 0) return 0;
 
 	let sum = 0;
-	for (const [key, value] of Object.entries(obj)) {
+	for (const value of Object.values(obj)) {
 		sum += value;
 	}
 	return sum;
 }
+
 console.log('\nObjects Task 2\n');
 console.log(sumSalaries(salaries)); // 650
 
