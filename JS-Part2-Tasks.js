@@ -180,13 +180,7 @@ let salaries = {
 };
 
 function sumSalaries(obj) {
-	if (Object.keys(obj).length === 0) return 0;
-
-	let sum = 0;
-	for (const value of Object.values(obj)) {
-		sum += value;
-	}
-	return sum;
+	return Object.values(obj).reduce((sum, value) => sum + value, 0)
 }
 
 console.log('\nObjects Task 2\n');
